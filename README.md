@@ -19,7 +19,7 @@ Navegue pelas pastas abaixo para acessar os resumos específicos de cada tecnolo
 
 | Tecnologia / Curso | Descrição | Link Direto |
 | :--- | :--- | :---: |
-| **Git e GitHub** | Comandos essenciais, fluxos de ramificação (branches) e resoluções de desafios da DIO. | [Acessar Pasta](./Git-e-GitHub/) |
+| **Git e GitHub** | Comandos essenciais, fluxos de ramificação (branches) e resoluções de desafios da DIO. | [Acessar Pasta]([./Git-e-GitHub/](https://github.com/Dl-Fernandes/Resumo-de-Cursos/tree/main/Git%20e%20GitHub)) |
 | **Comandos Linux** | Estrutura de diretórios, manipulação de arquivos, permissões e scripts básicos. | [Acessar Pasta](./Comandos-Linux/) |
 | **Java & Spring** | Conceitos de POO, sintaxe da linguagem, APIs REST e ecossistema Spring Boot. | [Acessar Pasta](./Java-Spring/) |
 
