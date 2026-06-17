@@ -73,29 +73,55 @@ A estrutura dos comandos segue o padrão: `comando [origem] [destino]`.
 
 ## 🔒 5. Gerenciamento de Usuários, Grupos e Permissões
 
-Administração de contas e controle de acessos no sistema. O superusuário administrador é conhecido como **Root**.
+Administração de contas e controle de acessos no sistema. O superusuário administrador é conhecido como **root**.
 
 ### Identificação e Grupos
-* `cat /etc/passwd` &rarr; Arquivo do sistema que lista todas as contas de usuários.
-* `cat /etc/group` &rarr; Arquivo do sistema que lista todos os grupos e seus respectivos membros.
-* `groupadd [nome_do_grupo]` &rarr; Cria um novo grupo no sistema.
-* `groupdel [nome_do_grupo]` &rarr; Remove um grupo existente.
+
+* `cat /etc/passwd` → Arquivo do sistema que lista todas as contas de usuários.
+* `cat /etc/group` → Arquivo do sistema que lista todos os grupos e seus respectivos membros.
+* `id` → Exibe os identificadores (UID, GID) e os grupos aos quais o usuário pertence.
+* `logname` → Exibe o nome do usuário que iniciou a sessão atual.
+* `groupadd [nome_do_grupo]` → Cria um novo grupo no sistema.
+* `groupdel [nome_do_grupo]` → Remove um grupo existente.
+
+### Informações de Login
+
+* `lastlog` → Exibe informações sobre o último login de todos os usuários.
+* `last` → Exibe o histórico de logins e logouts dos usuários.
 
 ### Criação e Modificação de Usuários
-* `su` &rarr; Alterna para o usuário root (exige a senha do root).
-* `su - usuario` &rarr; Alterna para a conta de outro usuário comum carregando suas variáveis de ambiente.
-* `sudo [comando]` &rarr; Executa um comando isolado com privilégios administrativos de root.
-* `useradd -m -c "Nome Completo" -s /bin/bash usuario` &rarr; Cria um usuário definindo pasta home (`-m`), comentário/nome (`-c`) e o shell padrão (`-s`).
-* `useradd usuario -c "Comentario" -m -s /bin/bash -p $(openssl passwd -6 senha)` &rarr; Cria um usuário definindo a senha criptografada via linha de comando.
-* `usermod -aG sudo usuario` &rarr; Adiciona (`-a`) o usuário ao grupo administrativo (`G`) sudo sem removê-lo dos grupos atuais.
-* `usermod -G adm,sudo usuario` &rarr; Define e substitui as permissões do usuário adicionando-o aos grupos listados.
-* `usermod -G [grupo] [usuario]` &rarr; Vincula um usuário a um grupo específico.
-* `userdel -rf usuario` &rarr; Remove permanentemente o usuário do sistema, forçando a operação (`-f`) e deletando sua pasta home (`-r`).
-* `passwd usuario` &rarr; Altera ou define a senha de acesso do usuário.
-* `passwd -e usuario` &rarr; Força a expiração (`-e`) da senha atual, obrigando o usuário a alterá-la no próximo logon.
 
-### Alteração de Propriedades (Dono/Grupo)
-* `chown [usuario]:[grupo] /[diretorio]` &rarr; Altera simultaneamente o usuário proprietário e o grupo dono de um diretório ou arquivo.
+* `adduser usuario` → Adiciona um novo usuário ao sistema de forma interativa.
+* `su` → Alterna para o usuário root (exige a senha do root).
+* `sudo su` → Alterna para o usuário root utilizando privilégios do sudo.
+* `su - usuario` → Alterna para outro usuário carregando suas variáveis de ambiente.
+* `sudo [comando]` → Executa um comando com privilégios administrativos.
+* `useradd -m -c "Nome Completo" -s /bin/bash usuario` → Cria um usuário definindo diretório home, nome e shell padrão.
+* `useradd usuario -c "Comentario" -m -s /bin/bash -p $(openssl passwd -6 senha)` → Cria um usuário definindo uma senha criptografada via linha de comando.
+* `usermod -aG sudo usuario` → Adiciona o usuário ao grupo sudo sem remover os grupos atuais.
+* `usermod -aG [grupo] [usuario]` → Adiciona o usuário a um grupo sem remover os demais grupos.
+* `usermod -G adm,sudo usuario` → Substitui os grupos secundários do usuário pelos grupos informados.
+* `userdel -rf usuario` → Remove permanentemente o usuário e seu diretório pessoal.
+* `passwd usuario` → Altera ou define a senha de um usuário.
+* `passwd -e usuario` → Força a alteração da senha no próximo login.
+
+### Gerenciamento de Grupos
+
+* `adduser usuario grupo` → Adiciona um usuário a um grupo.
+* `gpasswd -a usuario grupo` → Adiciona um usuário a um grupo.
+* `gpasswd -d usuario grupo` → Remove um usuário de um grupo.
+
+### Alteração de Propriedades (Dono e Grupo)
+
+* `chown [usuario]:[grupo] /[diretorio]` → Altera simultaneamente o usuário proprietário e o grupo dono de um arquivo ou diretório.
+
+### Permissões de Arquivos e Diretórios
+
+* `chmod [permissao] arquivo` → Altera as permissões de acesso de um arquivo ou diretório.
+* `chmod -R [permissao] diretorio` → Altera recursivamente as permissões de um diretório e seu conteúdo.
+* `chgrp [grupo] arquivo` → Altera o grupo proprietário de um arquivo ou diretório.
+* `ls -lh` → Exibe arquivos com detalhes, incluindo permissões, proprietário e grupo.
+
 
 ---
 
