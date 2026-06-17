@@ -204,5 +204,24 @@ Ao rodar o comando para abrir o utilitário (Ex: `fdisk /dev/sdb`), siga o passo
 
 ---
 
+## 🖥️ 13. Informações do Sistema e Hardware
+
+* `cat /proc/cpuinfo` → Exibe o arquivo com informações detalhadas do processador.
+* `lscpu` → Exibe informações resumidas sobre o processador.
+* `cat /proc/meminfo` → Exibe o arquivo com informações detalhadas da memória.
+* `free` → Exibe informações sobre memória física e memória virtual.
+* `lshw` → Exibe informações detalhadas sobre o hardware do sistema.
+* `lshw -short` → Exibe um resumo das informações de hardware.
+* `uname` → Exibe o nome do kernel do sistema.
+* `uname -r` → Exibe a versão do kernel.
+* `uname -m` → Exibe a arquitetura do sistema.
+* `arch` → Exibe a arquitetura do sistema.
+* `lspci` → Exibe todos os dispositivos PCI conectados.
+* `lsusb` → Exibe todos os dispositivos USB conectados.
+* `du -h ~` → Exibe o espaço ocupado por arquivos e diretórios do usuário.
+* `reboot` → Reinicia o sistema.
+* `shutdown -r` → Reinicia o sistema.
+* `shutdown -h now` → Desliga o sistema imediatamente.
+
 ## 🔗 Atalho de Navegação
 * ⬅️ [Voltar para o Menu Principal de Cursos](../README.md)
