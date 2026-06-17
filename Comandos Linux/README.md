@@ -223,5 +223,26 @@ Ao rodar o comando para abrir o utilitário (Ex: `fdisk /dev/sdb`), siga o passo
 * `shutdown -r` → Reinicia o sistema.
 * `shutdown -h now` → Desliga o sistema imediatamente.
 
+---
+
+## 🌐 14. Comandos de Rede
+
+* `ifconfig` → Exibe informações sobre interfaces de rede e endereços IP.
+* `hostname` → Exibe informações sobre o host.
+* `hostname -i` → Exibe o endereço IP associado ao host.
+* `hostname -I` → Exibe todos os endereços IP da máquina na rede.
+* `ping host` → Testa a conectividade com um host e verifica o tempo de resposta da rede.
+* `dig host` → Exibe informações de DNS de um host.
+* `dig host +short` → Exibe apenas o endereço IP de um host.
+* `nslookup host` → Consulta informações DNS de um host.
+* `traceroute host` → Exibe a rota percorrida pelos pacotes até o host de destino.
+* `ip addr` → Exibe informações sobre interfaces de rede e endereços IP.
+* `ip route` → Exibe a tabela de rotas da rede.
+* `ss -tuln` → Exibe portas e conexões de rede ativas.
+* `w` → Exibe informações detalhadas sobre os usuários conectados ao sistema.
+* `who` → Exibe informações resumidas sobre os usuários conectados ao sistema.
+* `whoami` → Exibe o nome do usuário atual.
+* `finger` → Exibe informações sobre usuários do sistema.
+
 ## 🔗 Atalho de Navegação
 * ⬅️ [Voltar para o Menu Principal de Cursos](../README.md)
