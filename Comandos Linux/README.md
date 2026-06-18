@@ -142,15 +142,54 @@ Funciona de maneira multimodal. Os modos principais são **Comando** e **Inserç
 
 ---
 
-## ⏱️ 7. Histórico e Variáveis de Ambiente
+## ⏱️ 7. Comandos Diversos, Histórico e Variáveis de Ambiente
 
-* `history` &rarr; Exibe a lista cronológica de comandos executados no terminal.
-* `!!` &rarr; Executa novamente o último comando rodado.
-* `!grep` &rarr; Executa o último comando do histórico iniciado com o termo "grep".
-* `history | grep "termo"` &rarr; Filtra a lista do histórico exibindo apenas ocorrências que correspondam ao termo buscado.
-* `set +o history` &rarr; Desativa temporariamente o registro de novos comandos no histórico do terminal.
-* `set -o history` &rarr; Reativa a gravação padrão de novos comandos no histórico.
-* `export VARIAVEL="valor"` &rarr; Cria ou altera uma variável de ambiente (por convenção, escritas em MAIÚSCULO).
+Comandos úteis para análise, pesquisa, comparação, administração do sistema e gerenciamento do ambiente do terminal.
+
+### Utilitários do Sistema
+
+* `ls -a` → Exibe arquivos e diretórios, incluindo os ocultos.
+* `ls -F` → Exibe os arquivos e adiciona indicadores ao tipo de cada item.
+* `nl arquivo` → Exibe um arquivo com numeração das linhas.
+* `wc -l arquivo` → Conta o número de linhas de um arquivo.
+* `wc -w arquivo` → Conta o número de palavras de um arquivo.
+* `wc -c arquivo` → Conta o número de bytes de um arquivo.
+* `sort arquivo` → Organiza as linhas de um arquivo em ordem alfabética ou numérica.
+* `time comando` → Exibe o tempo gasto na execução de um comando.
+* `uptime` → Exibe o tempo de atividade do sistema.
+* `cmp arquivo1 arquivo2` → Compara dois arquivos byte a byte.
+* `seq inicio fim` → Gera uma sequência numérica.
+* `alias nome='comando'` → Cria um apelido para um comando.
+* `last reboot` → Exibe o histórico de reinicializações do sistema.
+* `whereis programa` → Localiza o binário, código-fonte e manual de um programa.
+* `which programa` → Exibe o caminho do executável de um programa.
+* `logout` → Encerra a sessão atual do usuário.
+
+### Histórico de Comandos
+
+* `history` → Exibe uma lista cronológica dos comandos executados no terminal.
+* `!!` → Executa novamente o último comando executado.
+* `!grep` → Executa o último comando do histórico iniciado com "grep".
+* `history | grep "termo"` → Filtra o histórico exibindo apenas os comandos que contêm o termo informado.
+* `history -c` → Limpa o histórico de comandos do usuário atual.
+* `set +o history` → Desativa temporariamente o registro de novos comandos no histórico.
+* `set -o history` → Reativa o registro de novos comandos no histórico.
+
+### Variáveis de Ambiente
+
+* `export VARIAVEL="valor"` → Cria ou altera uma variável de ambiente.
+* `echo $VARIAVEL` → Exibe o valor de uma variável de ambiente.
+* `env` → Exibe todas as variáveis de ambiente da sessão atual.
+* `printenv` → Exibe as variáveis de ambiente do sistema.
+* `unset VARIAVEL` → Remove uma variável de ambiente da sessão atual.
+
+### Comandos Legados
+
+* `route -n` → Exibe a tabela de roteamento do sistema (substituído por `ip route`).
+* `init 0` → Desliga o sistema (legado).
+* `telinit 0` → Desliga o sistema (legado).
+* `halt` → Interrompe o sistema e pode desligá-lo, dependendo da configuração.
+
 
 ---
 
@@ -173,20 +212,49 @@ Os arquivos de automação em lote devem seguir os pré-requisitos abaixo:
 
 ---
 
-## 📦 9. Gerenciamento de Pacotes (`apt`)
+## 📦 9. Gerenciamento de Pacotes
 
-Comandos utilizados na distribuição Ubuntu/Debian para instalar e remover programas.
+Comandos utilizados para instalar, atualizar, remover e gerenciar softwares no sistema.
 
-* `apt update` &rarr; Atualiza os índices de pacotes das listas de repositórios.
-* `apt upgrade` &rarr; Atualiza efetivamente o sistema operacional aplicando as novas versões dos programas.
-* `apt list --installed` &rarr; Lista todos os pacotes e softwares atualmente instalados na máquina.
-* `apt list --upgradeable` &rarr; Exibe quais programas instalados possuem atualizações prontas para baixar.
-* `apt search [programa]` &rarr; Procura nos repositórios se o software buscado está disponível para instalação.
-* `apt install [programa]` &rarr; Baixa e instala o programa selecionado.
-* `apt remove [programa]` &rarr; Desinstala um pacote do sistema.
-* `apt remove [programa] -y` &rarr; Desinstala o pacote aceitando automaticamente todas as confirmações de segurança (`-y`).
-* `apt edit-sources` &rarr; Abre o arquivo de configuração para adicionar ou remover repositórios de terceiros fora do espelho oficial do Ubuntu.
-* `unzip [arquivo.zip]` &rarr; Utilitário para extrair e descompactar arquivos comprimidos de formato `.zip`.
+### Distribuições Debian/Ubuntu (`apt`)
+
+* `apt` → Gerenciador de pacotes padrão das distribuições Debian e Ubuntu.
+* `apt update` → Atualiza os índices de pacotes das listas de repositórios.
+* `apt upgrade` → Atualiza os pacotes instalados para suas versões mais recentes.
+* `apt update && apt upgrade` → Atualiza a lista de pacotes e o sistema em um único comando.
+* `apt list --installed` → Lista todos os pacotes instalados.
+* `apt list --upgradeable` → Exibe os pacotes que possuem atualizações disponíveis.
+* `apt search [programa]` → Procura um pacote nos repositórios.
+* `apt install [programa]` → Instala um pacote.
+* `apt remove [programa]` → Remove um pacote do sistema.
+* `apt remove [programa] -y` → Remove um pacote sem solicitar confirmação.
+* `apt edit-sources` → Edita a lista de repositórios do sistema.
+
+### Pacotes Debian (`dpkg`)
+
+* `dpkg` → Gerenciador de pacotes `.deb`.
+* `dpkg -i pacote.deb` → Instala um pacote `.deb`.
+* `dpkg -r pacote` → Remove um pacote `.deb`.
+* `dpkg -l` → Lista os pacotes instalados no sistema.
+
+### Distribuições Red Hat/CentOS (`rpm`)
+
+* `rpm` → Gerenciador de pacotes RPM.
+* `rpm -ivh pacote.rpm` → Instala um pacote RPM.
+* `rpm -U pacote.rpm` → Atualiza um pacote RPM.
+* `rpm -e pacote` → Remove um pacote RPM.
+
+### Distribuições Red Hat/CentOS (`yum`)
+
+* `yum` → Gerenciador de pacotes das distribuições baseadas em Red Hat mais antigas.
+* `yum install pacote` → Instala um pacote.
+* `yum update` → Atualiza os pacotes instalados.
+* `yum remove pacote` → Remove um pacote.
+
+### Utilitário Relacionado
+
+* `unzip arquivo.zip` → Extrai e descompacta arquivos no formato `.zip`.
+
 
 ---
 
