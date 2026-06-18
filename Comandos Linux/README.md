@@ -270,5 +270,27 @@ Ao rodar o comando para abrir o utilitário (Ex: `fdisk /dev/sdb`), siga o passo
 * `whoami` → Exibe o nome do usuário atual.
 * `finger` → Exibe informações sobre usuários do sistema.
 
+---
+
+## 🗜️ 15. Compactação e Arquivamento
+
+Comandos utilizados para compactar, descompactar e arquivar arquivos e diretórios.
+
+* `gzip arquivo` → Compacta um arquivo no formato `.gz`.
+* `gunzip arquivo.gz` → Descompacta um arquivo no formato `.gz`.
+* `zip arquivo.zip arquivo` → Compacta arquivos no formato `.zip`.
+* `unzip arquivo.zip` → Descompacta arquivos no formato `.zip`.
+* `rar a arquivo.rar arquivo` → Compacta arquivos no formato `.rar`.
+* `rar x arquivo.rar` → Descompacta arquivos no formato `.rar`.
+* `bzip2 arquivo` → Compacta um arquivo no formato `.bz2`.
+* `bzip2 -d arquivo.bz2` → Descompacta um arquivo no formato `.bz2`.
+* `tar -cvf arquivo.tar diretorio/` → Arquiva um ou mais arquivos sem compactação.
+* `tar -xvf arquivo.tar` → Extrai arquivos de um arquivo `.tar`.
+* `tar -czvf arquivo.tar.gz diretorio/` → Cria um arquivo compactado no formato `.tar.gz`.
+* `tar -xzvf arquivo.tar.gz` → Extrai arquivos de um arquivo `.tar.gz`.
+* `tar -cjvf arquivo.tar.bz2 diretorio/` → Cria um arquivo compactado no formato `.tar.bz2`.
+* `tar -xjvf arquivo.tar.bz2` → Extrai arquivos de um arquivo `.tar.bz2`.
+
+
 ## 🔗 Atalho de Navegação
 * ⬅️ [Voltar para o Menu Principal de Cursos](../README.md)
