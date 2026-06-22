@@ -39,16 +39,32 @@ Comandos utilizados para baixar e listar imagens Docker.
 
 ## 📦 4. Gerenciamento de Containers
 
-Comandos utilizados para criar, executar e visualizar containers.
+Comandos utilizados para criar, executar, acessar e interromper containers.
 
 * `docker run [imagem]` → Cria e executa um container a partir de uma imagem.
+* `docker run [imagem] sleep [segundos]` → Mantém o container em execução durante o tempo especificado.
+* `docker run -it [imagem]` → Executa um container em modo interativo, permitindo utilizar o terminal interno do container.
 * `docker ps` → Exibe apenas os containers em execução.
-* `docker ps -a` → Exibe todos os containers, inclusive os parados.
+* `docker ps -a` → Exibe todos os containers, inclusive os que já foram encerrados.
+* `docker stop [container]` → Interrompe a execução de um container.
 
 ### Exemplos
 
-* `docker run nginx` → Executa um container baseado na imagem Nginx.
 * `docker run ubuntu` → Executa um container baseado na imagem Ubuntu.
+* `docker run ubuntu sleep 10` → Mantém o container ativo por 10 segundos.
+* `docker run ubuntu sleep 60` → Mantém o container ativo por 1 minuto.
+* `docker run -it ubuntu` → Inicia um terminal interativo dentro de um container Ubuntu.
+* `docker ps` → Exibe os containers em execução.
+* `docker ps -a` → Exibe todos os containers criados.
+* `docker stop hopeful_morse` → Interrompe o container chamado `hopeful_morse`.
+
+### Conceitos Importantes
+
+* `-i` → Mantém a entrada padrão (STDIN) aberta.
+* `-t` → Cria um terminal virtual (TTY).
+* `-it` → Combina os dois parâmetros, permitindo interação direta com o container.
+* `sleep` → Comando utilizado para manter o container ativo por um período específico.
+
 
 ---
 
