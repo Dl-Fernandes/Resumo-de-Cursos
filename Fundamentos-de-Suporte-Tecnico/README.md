@@ -24,31 +24,14 @@ Entre os principais objetivos estão:
 
 ## 📚 Conteúdo do Curso
 
-### 🖥️ Módulo 1 – Arquitetura do Computador
-
-- História da computação
-- Sistema binário
-- Bits e bytes
-- Codificação de caracteres (ASCII e UTF-8)
-- Componentes básicos do computador
-- Portas lógicas
-- Código aberto
-- Linux
-- Criptografia
-- Tecnologia da Informação
+- 🧠 Arquitetura do Computador
+- 🖥️ Hardware
+- 💽 Sistema Operacional
+- 🌐 Redes
+- 📦 Software
+- 🛠️ Solução de Problemas
 
 ➡️ **Acesse:** [Arquitetura do Computador](./Arquitetura-do-Computador/README.md)
-
----
-
-### ⏳ Próximos módulos
-
-- 💽 Sistema Operacional
-- 🌐 Redes de Computadores
-- 📦 Software
-- 🛠️ Solução de Problemas e Suporte Técnico
-
-> Os módulos serão adicionados conforme o andamento do curso.
 
 ---
 
