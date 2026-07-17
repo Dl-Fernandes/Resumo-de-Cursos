@@ -263,6 +263,301 @@ Esses conhecimentos são fundamentais para compreender como os componentes físi
 
 ---
 
+---
+
+# 💽 Armazenamento de Dados
+
+Os dispositivos de armazenamento são responsáveis por guardar permanentemente os dados do computador, como sistema operacional, programas, documentos, fotos e vídeos.
+
+Ao contrário da memória RAM, o armazenamento é **não volátil**, ou seja, os dados permanecem gravados mesmo após o desligamento do computador.
+
+---
+
+## 📏 Unidades de Medida de Dados
+
+As informações armazenadas em um computador são medidas utilizando unidades padronizadas.
+
+| Unidade | Equivalência |
+|----------|--------------|
+| Bit (b) | Menor unidade de informação (0 ou 1). |
+| Byte (B) | 8 bits. |
+| Kilobyte (KB) | 1.024 bytes. |
+| Megabyte (MB) | 1.024 KB. |
+| Gigabyte (GB) | 1.024 MB. |
+| Terabyte (TB) | 1.024 GB. |
+| Petabyte (PB) | 1.024 TB. |
+| Exabyte (EB) | 1.024 PB. |
+| Zettabyte (ZB) | 1.024 EB. |
+| Yottabyte (YB) | 1.024 ZB. |
+
+---
+
+## 📚 Sistema Decimal × Sistema Binário
+
+Existem duas formas de representar capacidades de armazenamento.
+
+### Sistema Decimal
+
+Utilizado principalmente pelos fabricantes de discos.
+
+| Prefixo | Valor |
+|----------|-------|
+| KB | 1.000 bytes |
+| MB | 1.000² bytes |
+| GB | 1.000³ bytes |
+| TB | 1.000⁴ bytes |
+
+---
+
+### Sistema Binário
+
+Utilizado pelos sistemas operacionais e engenharia da computação.
+
+| Prefixo | Valor |
+|----------|-------|
+| KiB | 1.024 bytes |
+| MiB | 1.024² bytes |
+| GiB | 1.024³ bytes |
+| TiB | 1.024⁴ bytes |
+
+> O sistema binário oferece maior precisão na representação das capacidades de armazenamento.
+
+---
+
+# 💿 Dispositivos de Armazenamento
+
+Os principais dispositivos utilizados atualmente são os HDDs e SSDs.
+
+---
+
+## HDD (Hard Disk Drive)
+
+O HDD utiliza discos magnéticos que giram em alta velocidade.
+
+Os dados são lidos e gravados por um braço mecânico.
+
+### Características
+
+- Maior capacidade por menor custo.
+- Possui partes móveis.
+- Velocidade medida em RPM (Rotações por Minuto).
+- Mais sensível a impactos físicos.
+
+---
+
+## SSD (Solid State Drive)
+
+O SSD utiliza memória flash para armazenar dados.
+
+Como não possui partes móveis, oferece desempenho muito superior ao HDD.
+
+### Características
+
+- Muito mais rápido.
+- Menor consumo de energia.
+- Mais resistente a impactos.
+- Funcionamento silencioso.
+- Custo por gigabyte mais elevado.
+
+---
+
+# 🔌 Interfaces de Conexão
+
+A interface determina como o dispositivo de armazenamento se comunica com o computador.
+
+---
+
+## SATA (Serial ATA)
+
+A interface SATA é a mais utilizada em HDDs e SSDs tradicionais.
+
+Características:
+
+- Boa compatibilidade.
+- Permite Hot Swap (troca com o equipamento ligado, quando suportado).
+- Velocidade inferior ao NVMe.
+
+---
+
+## NVMe (Non-Volatile Memory Express)
+
+O NVMe foi desenvolvido especificamente para SSDs.
+
+Ele utiliza as pistas PCI Express (PCIe), oferecendo velocidades muito superiores ao SATA.
+
+### Vantagens
+
+- Maior velocidade de leitura.
+- Maior velocidade de gravação.
+- Menor latência.
+- Melhor desempenho geral.
+
+---
+
+# 🔋 Fonte de Alimentação (Power Supply Unit - PSU)
+
+A fonte de alimentação converte a corrente alternada (CA) da rede elétrica em corrente contínua (CC), utilizada pelos componentes internos do computador.
+
+Além disso, fornece diferentes níveis de tensão para cada componente.
+
+---
+
+## Funções da Fonte
+
+- Converter corrente alternada em corrente contínua.
+- Distribuir energia para os componentes internos.
+- Proteger o computador contra variações elétricas.
+
+---
+
+## Tensões Utilizadas
+
+| Tensão | Componentes |
+|---------|-------------|
+| 3,3 V | Chipsets e módulos de memória. |
+| 5 V | Dispositivos lógicos e alguns controladores. |
+| 12 V | CPU, placas de vídeo, discos e coolers. |
+
+---
+
+## Compatibilidade da Fonte
+
+Ao escolher uma fonte de alimentação é necessário considerar:
+
+- Potência necessária.
+- Formato da placa-mãe (ATX, Micro-ATX, Mini-ITX).
+- Quantidade de dispositivos instalados.
+- Consumo da CPU.
+- Consumo da GPU.
+
+---
+
+## Conector Principal ATX
+
+O padrão atual utiliza um conector principal de:
+
+- 24 pinos
+
+Modelos antigos utilizavam:
+
+- 20 pinos
+
+---
+
+# 🌎 Tensão Elétrica
+
+A tensão elétrica varia conforme o país.
+
+Os padrões mais comuns são:
+
+- 110–127 V
+- 220–240 V
+
+Utilizar uma tensão incompatível pode impedir o funcionamento do computador ou causar danos aos componentes.
+
+---
+
+# 🖱️ Periféricos
+
+Periféricos são dispositivos externos conectados ao computador para adicionar funcionalidades.
+
+Exemplos:
+
+- Mouse
+- Teclado
+- Monitor
+- Impressora
+- Webcam
+- Scanner
+
+---
+
+# 🔌 Conectores USB
+
+O USB (Universal Serial Bus) é o padrão mais utilizado para conectar periféricos.
+
+| Padrão | Cor (geralmente) | Velocidade |
+|---------|------------------|------------|
+| USB 2.0 | Preto | 480 Mbps |
+| USB 3.0 | Azul | 5 Gbps |
+| USB 3.1 | Azul-petróleo | 10 Gbps |
+
+As portas USB são retrocompatíveis.
+
+---
+
+## USB Tipo C
+
+O USB-C tornou-se o padrão mais moderno.
+
+Pode transmitir:
+
+- Dados
+- Vídeo
+- Áudio
+- Energia
+
+Também é utilizado pelo padrão USB4/Thunderbolt.
+
+---
+
+# 🖥️ Conectores de Vídeo
+
+Os principais conectores para monitores são:
+
+### DVI
+
+- Transmite apenas vídeo.
+
+### HDMI
+
+- Transmite áudio e vídeo.
+
+### DisplayPort
+
+- Transmite áudio e vídeo.
+- Muito utilizado em monitores de alto desempenho.
+
+---
+
+# 🌐 Conectores de Rede
+
+Os principais conectores utilizados em redes são:
+
+| Conector | Utilização |
+|-----------|------------|
+| RJ-11 | Telefonia (POTS/DSL). |
+| RJ-45 | Redes Ethernet. |
+| Fibra Óptica | Internet de alta velocidade. |
+
+---
+
+# 🔧 Outros Conectores
+
+### Molex
+
+Utilizado para alimentação de dispositivos internos, principalmente em equipamentos mais antigos.
+
+### DB9
+
+Conector serial encontrado em equipamentos legados.
+
+### Lightning
+
+Conector proprietário utilizado pela Apple.
+
+---
+
+# 📖 Resumo
+
+Neste módulo foram estudados os principais componentes físicos responsáveis pelo funcionamento do computador.
+
+Também foram abordados os dispositivos de armazenamento (HDD e SSD), unidades de medida de dados, fontes de alimentação, periféricos, interfaces de conexão, portas USB, conectores de vídeo e comunicação, além das diferenças entre os principais padrões utilizados atualmente.
+
+Esses conhecimentos fornecem uma base sólida para compreender a montagem, manutenção e compatibilidade de computadores modernos.
+
+---
+
 ## 🔗 Atalho de Navegação
 
 ⬅️ [Voltar para Fundamentos do Suporte Técnico](../README.md)
